@@ -1,0 +1,86 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Karyawan | UAS PPBO</title>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" media="screen"/>
+    <link th:href="@{/css/starter-template.css}" rel="stylesheet" media="screen"/>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/siswa">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tentang">About Us</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">UAS Praktikum PBO</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+    
+		<h1>Data Karyawan</h1>
+		<div class="row">
+			<div class="col-sm-8">
+				<form class="form-horizontal" th:object="${siswa}" th:action="@{/siswa/buat}" method="post">
+					<input type="hidden" th:field="*{id}"/>
+					<input type="hidden" th:field="*{version}"/>
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label">NIP</label>
+						<div class="col-sm-10">
+							<input type="number" class="form-control" th:field="*{nis}"/>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label">NAMA KARYAWAN</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" th:field="*{nama}"/>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label">NIK</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" th:field="*{kelas}"/>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Domisili</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" th:field="*{domisili}"/>
+						</div>
+					</div>
+					
+				
+					
+					<div class="form-group">
+						<button type="submit" class="btn btn-success">Simpan</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+		
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script th:src="@{/js/popper.js}"></script>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+  </body>
+</html>

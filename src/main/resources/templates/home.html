@@ -1,0 +1,40 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Karyawan | UAS PPBO</title>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" media="screen"/>
+    <link th:href="@{/css/starter-template.css}" rel="stylesheet" media="screen"/>
+    <link th:href="@{/fonts/font-awesome.min.css}" rel="stylesheet" media="screen"/>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-primary bg-dark fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">UAS Praktikum PBO</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+    	<div>
+    		<h2>PROJECT UAS PRAKTIKUM PBO - D</h2>
+    		<h5>Program CRUD dengan Java Framework</h5>
+    	</div>
+    	<div>
+    		<a href="/siswa" class="btn btn-success">Jalankan Program</a>
+    	</div>
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script th:src="@{/js/popper.js}"></script>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+  </body>
+</html>
